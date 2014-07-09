@@ -6,12 +6,12 @@ using Telerik.Sitefinity.AuditTrail;
 using Telerik.Sitefinity.Configuration;
 using Telerik.Sitefinity.Services;
 
-namespace Telerik.Sitefinity.ElasticSearchAuditModule
+namespace Telerik.Sitefinity.ElasticsearchAuditModule
 {
     /// <summary>
     /// Custom Sitefinity content module 
     /// </summary>
-    public class ElasticSearchModule : ModuleBase
+    public class ElasticsearchModule : ModuleBase
     {
         #region Properties
         /// <summary>
@@ -67,8 +67,8 @@ namespace Telerik.Sitefinity.ElasticSearchAuditModule
             App.WorkWith()
                 .Module(settings.Name)
                     .Initialize()
-                    .Localization<ElasticSearchResources>()
-                    .Configuration<ElasticSearchConfig>();
+                    .Localization<ElasticsearchResources>()
+                    .Configuration<ElasticsearchConfig>();
 
             var container = ObjectFactory.Container;
             container.RegisterType<IAuditLogger, ElasticsearchAuditLogger>("ElasticSearchAuditLogger");
@@ -82,7 +82,7 @@ namespace Telerik.Sitefinity.ElasticSearchAuditModule
         /// </summary>
         protected override ConfigSection GetModuleConfig()
         {
-            return Config.Get<ElasticSearchConfig>();
+            return Config.Get<ElasticsearchConfig>();
         }
 
 
@@ -93,9 +93,9 @@ namespace Telerik.Sitefinity.ElasticSearchAuditModule
         #endregion                   
 
         #region Private members & constants
-        public const string ModuleName = "ElasticSearchAuditModule";
-        internal const string ModuleTitle = "ElasticSearchAuditModule";
-        internal const string ModuleDescription = "ElasticSearch audit module logs events from Audit trail to ElasticSearch index, which could be monitored through Kibana.";
+        public const string ModuleName = "ElasticsearchAuditModule";
+        internal const string ModuleTitle = "ElasticsearchAuditModule";
+        internal const string ModuleDescription = "Elasticsearch audit module logs events from Audit trail to ElasticSearch index, which could be monitored through Kibana.";
         #endregion
 
     }

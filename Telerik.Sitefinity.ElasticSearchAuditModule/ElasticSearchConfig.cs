@@ -6,13 +6,13 @@ using Telerik.Sitefinity.Modules.GenericContent.Configuration;
 
 
 
-namespace Telerik.Sitefinity.ElasticSearchAuditModule
+namespace Telerik.Sitefinity.ElasticsearchAuditModule
 {
     /// <summary>
     /// Represents the configuration section for ElasticSearch module.
     /// </summary>
     [ObjectInfo(Title = "ElasticSearch Config Title", Description = "ElasticSearch Config Description")]
-    public class ElasticSearchConfig : ModuleConfigBase
+    public class ElasticsearchConfig : ModuleConfigBase
     {
         /// <inheritdoc />
         protected override void InitializeDefaultProviders(Sitefinity.Configuration.ConfigElementDictionary<string, Sitefinity.Configuration.DataProviderSettings> providers)

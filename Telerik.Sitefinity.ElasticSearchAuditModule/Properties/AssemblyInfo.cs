@@ -2,7 +2,7 @@
 using System.Runtime.InteropServices;
 using System.Web;
 using System.Web.UI;
-using Telerik.Sitefinity.ElasticSearchAuditModule;
+using Telerik.Sitefinity.ElasticsearchAuditModule;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
@@ -17,7 +17,7 @@ using Telerik.Sitefinity.ElasticSearchAuditModule;
 [assembly: AssemblyCulture("")]
 
 // Registers ElasticSearchInstaller.PreApplicationStart() to be executed prior to the application start
-[assembly: PreApplicationStartMethod(typeof(ElasticSearchInstaller), "PreApplicationStart")]
+[assembly: PreApplicationStartMethod(typeof(ElasticsearchInstaller), "PreApplicationStart")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 

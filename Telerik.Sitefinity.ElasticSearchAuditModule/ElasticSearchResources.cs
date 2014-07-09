@@ -3,7 +3,7 @@ using System.Linq;
 using Telerik.Sitefinity.Localization;
 using Telerik.Sitefinity.Localization.Data;
 
-namespace Telerik.Sitefinity.ElasticSearchAuditModule
+namespace Telerik.Sitefinity.ElasticsearchAuditModule
 {
     /// <summary>
     /// Localizable strings for the ElasticSearch module
@@ -14,13 +14,13 @@ namespace Telerik.Sitefinity.ElasticSearchAuditModule
     /// </remarks>
     /// <see cref="http://www.sitefinity.com/documentation/documentationarticles/developers-guide/how-to/how-to-import-events-from-facebook/creating-the-resources-class"/>
     [ObjectInfo("ElasticSearchResources", ResourceClassId = "ElasticSearchResources", Title = "ElasticSearchResourcesTitle", TitlePlural = "ElasticSearchResourcesTitlePlural", Description = "ElasticSearchResourcesDescription")]
-    public class ElasticSearchResources : Resource
+    public class ElasticsearchResources : Resource
     {
         #region Construction
         /// <summary>
-        /// Initializes new instance of <see cref="ElasticSearchResources"/> class with the default <see cref="ResourceDataProvider"/>.
+        /// Initializes new instance of <see cref="ElasticsearchResources"/> class with the default <see cref="ResourceDataProvider"/>.
         /// </summary>
-        public ElasticSearchResources()
+        public ElasticsearchResources()
         {
         }
         
