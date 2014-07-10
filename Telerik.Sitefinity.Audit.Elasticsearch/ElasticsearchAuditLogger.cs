@@ -8,13 +8,13 @@ using Telerik.Sitefinity.Web.Events;
 using Telerik.Sitefinity.AuditTrail;
 
 
-namespace Telerik.Sitefinity.ElasticsearchAuditModule
+namespace Telerik.Sitefinity.Audit.Elasticsearch
 {
     internal class ElasticsearchAuditLogger : IAuditLogger
     {
         public ElasticsearchAuditLogger()
         {
-            var uri = new Uri(Config.Get<ElasticsearchConfig>().ElasticsearchUri);
+            var uri = new Uri(Config.Get<ElasticsearchAuditConfig>().ElasticsearchUri);
             var setting = new ConnectionSettings(uri, IndexName);
 
             this.client = new ElasticClient(setting);

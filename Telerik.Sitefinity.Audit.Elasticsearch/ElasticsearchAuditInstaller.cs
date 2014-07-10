@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Linq;
-using System.Reflection;
 using Telerik.Sitefinity.Abstractions;
 using Telerik.Sitefinity.Configuration;
 using Telerik.Sitefinity.Data;
 using Telerik.Sitefinity.Services;
-using Telerik.Sitefinity.AuditTrail;
 
-namespace Telerik.Sitefinity.ElasticsearchAuditModule
+namespace Telerik.Sitefinity.Audit.Elasticsearch
 {
     /// <summary>
     /// Module installer class
@@ -18,7 +16,7 @@ namespace Telerik.Sitefinity.ElasticsearchAuditModule
     /// The User will have to enable the module from Administration -> Modules & Services
     /// </remarks>
     /// <see cref="http://www.sitefinity.com/blogs/peter-marinovs-blog/2013/03/20/creating-self-installing-widgets-and-modules-in-sitefinity"/>
-    public static class ElasticsearchInstaller
+    public static class ElasticsearchAuditInstaller
     {
         #region Public methods
         /// <summary>
@@ -26,7 +24,7 @@ namespace Telerik.Sitefinity.ElasticsearchAuditModule
         /// </summary>
         public static void PreApplicationStart()
         {
-            Bootstrapper.Initialized += ElasticsearchInstaller.OnBootstrapperInitialized;
+            Bootstrapper.Initialized += ElasticsearchAuditInstaller.OnBootstrapperInitialized;
         }
         #endregion
 
@@ -41,26 +39,26 @@ namespace Telerik.Sitefinity.ElasticsearchAuditModule
             if (e.CommandName == "RegisterRoutes")
             {
                 // We have to register the module at a very early stage when sitefinity is initializing
-                ElasticsearchInstaller.RegisterModule();
+                ElasticsearchAuditInstaller.RegisterModule();
             }
         }
 
         /// <summary>
-        /// Registers the ElasticSearch module.
+        /// Registers the Elasticsearch module.
         /// </summary>
         private static void RegisterModule()
         {
             var configManager = ConfigManager.GetManager();
             var modulesConfig = configManager.GetSection<SystemConfig>().ApplicationModules;
-            bool isElasticSearchModuleRegistered = modulesConfig.Elements.Any(el => el.GetKey().Equals(ElasticsearchModule.ModuleName));            
-            if (!isElasticSearchModuleRegistered)
+            bool isElasticsearchModuleRegistered = modulesConfig.Elements.Any(el => el.GetKey().Equals(ElasticsearchAuditModule.ModuleName));
+            if (!isElasticsearchModuleRegistered)
             {
-                modulesConfig.Add(ElasticsearchModule.ModuleName, new AppModuleSettings(modulesConfig)
+                modulesConfig.Add(ElasticsearchAuditModule.ModuleName, new AppModuleSettings(modulesConfig)
                 {
-                    Name = ElasticsearchModule.ModuleName,
-                    Title = ElasticsearchModule.ModuleTitle,
-                    Description = ElasticsearchModule.ModuleDescription,
-                    Type = typeof(ElasticsearchModule).AssemblyQualifiedName,                    
+                    Name = ElasticsearchAuditModule.ModuleName,
+                    Title = ElasticsearchAuditModule.ModuleTitle,
+                    Description = ElasticsearchAuditModule.ModuleDescription,
+                    Type = typeof(ElasticsearchAuditModule).AssemblyQualifiedName,
                     StartupType = StartupType.Disabled
                 });
 

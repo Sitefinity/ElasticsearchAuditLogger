@@ -6,12 +6,12 @@ using Telerik.Sitefinity.AuditTrail;
 using Telerik.Sitefinity.Configuration;
 using Telerik.Sitefinity.Services;
 
-namespace Telerik.Sitefinity.ElasticsearchAuditModule
+namespace Telerik.Sitefinity.Audit.Elasticsearch
 {
     /// <summary>
     /// Custom Sitefinity content module 
     /// </summary>
-    public class ElasticsearchModule : ModuleBase
+    public class ElasticsearchAuditModule : ModuleBase
     {
         #region Properties
         /// <summary>
@@ -67,11 +67,11 @@ namespace Telerik.Sitefinity.ElasticsearchAuditModule
             App.WorkWith()
                 .Module(settings.Name)
                     .Initialize()
-                    .Localization<ElasticsearchResources>()
-                    .Configuration<ElasticsearchConfig>();
+                    .Localization<ElasticsearchAuditResources>()
+                    .Configuration<ElasticsearchAuditConfig>();
 
             var container = ObjectFactory.Container;
-            container.RegisterType<IAuditLogger, ElasticsearchAuditLogger>("ElasticSearchAuditLogger");
+            container.RegisterType<IAuditLogger, ElasticsearchAuditLogger>("ElasticsearchAuditLogger");
             
         }
         #endregion
@@ -82,7 +82,7 @@ namespace Telerik.Sitefinity.ElasticsearchAuditModule
         /// </summary>
         protected override ConfigSection GetModuleConfig()
         {
-            return Config.Get<ElasticsearchConfig>();
+            return Config.Get<ElasticsearchAuditConfig>();
         }
 
 
@@ -93,9 +93,11 @@ namespace Telerik.Sitefinity.ElasticsearchAuditModule
         #endregion                   
 
         #region Private members & constants
-        public const string ModuleName = "ElasticsearchAuditModule";
-        internal const string ModuleTitle = "ElasticsearchAuditModule";
-        internal const string ModuleDescription = "Elasticsearch audit module logs events from Audit trail to ElasticSearch index, which could be monitored through Kibana.";
+
+        public const string ModuleName = "AuditTrail.Elasticsearch";
+        internal const string ModuleTitle = "AuditTrail.Elasticsearch";
+        internal const string ModuleDescription = "Logs audit events to an Elasticsearch instance.";
+
         #endregion
 
     }

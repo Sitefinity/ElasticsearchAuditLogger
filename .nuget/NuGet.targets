@@ -19,8 +19,9 @@
     <ItemGroup Condition=" '$(PackageSources)' == '' ">
         <!-- Package sources used to restore packages. By default, registered sources under %APPDATA%\NuGet\NuGet.Config will be used -->
         <!-- The official NuGet package source (https://www.nuget.org/api/v2/) will be excluded if package sources are specified and it does not appear in the list -->
-        <PackageSource Include="\\telerik.com\resources\Controls\DISTRIBUTIONS\Sitefinity\nuget"/>
+      
         <PackageSource Include="\\telerik.com\resources\Controls\DISTRIBUTIONS\Sitefinity\BUILDS\NuGet\7.1.5142.0" />
+        <PackageSource Include="\\telerik.com\resources\Controls\DISTRIBUTIONS\Sitefinity\nuget"/>
         <PackageSource Include="\\telerik.com\resources\Nuget" />
 
         <PackageSource Include="http://nuget.sitefinity.com/nuget/" />
