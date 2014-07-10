@@ -94,8 +94,8 @@ namespace Telerik.Sitefinity.Audit.Elasticsearch
 
         #region Private members & constants
 
-        public const string ModuleName = "AuditTrail.Elasticsearch";
-        internal const string ModuleTitle = "AuditTrail.Elasticsearch";
+        public const string ModuleName = "ElasticsearchAudit";
+        internal const string ModuleTitle = "Audit Trail - Elasticsearch";
         internal const string ModuleDescription = "Logs audit events to an Elasticsearch instance.";
 
         #endregion
