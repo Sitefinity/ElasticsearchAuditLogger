@@ -7,12 +7,12 @@ using Telerik.Sitefinity.ElasticsearchAuditModule;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Telerik.Sitefinity.ElasticSearch")]
+[assembly: AssemblyTitle("Telerik.Sitefinity.Audit.Elasticsearch")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Telerik.Sitefinity.ElasticSearch")]
-[assembly: AssemblyCopyright("Copyright ©  2014")]
+[assembly: AssemblyCompany("Telerik")]
+[assembly: AssemblyProduct("Telerik Sitefintiy CMS")]
+[assembly: AssemblyCopyright("Copyright © Telerik 2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -37,8 +37,5 @@ using Telerik.Sitefinity.ElasticsearchAuditModule;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
-
-[assembly: WebResource("Telerik.Sitefinity.ElasticSearchAuditModule.Web.Resources.CustomStylesKendoUIView.css", "text/css", PerformSubstitution = true)]
-[assembly: WebResource("Telerik.Sitefinity.ElasticSearchAuditModule.Web.Resources.paging.png", "image/gif")]
+[assembly: AssemblyVersion("7.1.5200.0")]
+[assembly: AssemblyFileVersion("7.1.5200.0")]

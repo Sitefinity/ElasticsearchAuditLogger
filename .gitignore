@@ -1,0 +1,4 @@
+*.suo
+Telerik.Sitefinity.ElasticsearchAuditModule/bin/
+Telerik.Sitefinity.ElasticsearchAuditModule/obj/
+Telerik.Sitefinity.ElasticsearchAuditModule/packages/

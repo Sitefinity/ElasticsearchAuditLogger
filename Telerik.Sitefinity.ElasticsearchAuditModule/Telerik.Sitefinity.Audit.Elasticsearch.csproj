@@ -7,8 +7,8 @@
     <ProjectGuid>{70527136-D2F9-4660-B599-B2F9F917015B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Telerik.Sitefinity.ElasticSearch</RootNamespace>
-    <AssemblyName>Telerik.Sitefinity.ElasticsearchAuditModule</AssemblyName>
+    <RootNamespace>Telerik.Sitefinity.Audit.Elasticsearch</RootNamespace>
+    <AssemblyName>Telerik.Sitefinity.Audit.Elasticsearch</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
