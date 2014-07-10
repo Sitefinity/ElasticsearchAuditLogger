@@ -1,4 +1,6 @@
 *.suo
-Telerik.Sitefinity.Audit.Elasticsearch/bin/
-Telerik.Sitefinity.Audit.Elasticsearch/obj/
-Telerik.Sitefinity.Audit.Elasticsearch/packages/
+*.jmconfig
+bin/
+obj/
+packages/
+

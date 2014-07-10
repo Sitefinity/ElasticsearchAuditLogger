@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Telerik.Sitefinity.Audit.Elasticsearch", "Telerik.Sitefinity.Audit.Elasticsearch.csproj", "{70527136-D2F9-4660-B599-B2F9F917015B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Telerik.Sitefinity.Audit.Elasticsearch", "Telerik.Sitefinity.Audit.Elasticsearch\Telerik.Sitefinity.Audit.Elasticsearch.csproj", "{70527136-D2F9-4660-B599-B2F9F917015B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
