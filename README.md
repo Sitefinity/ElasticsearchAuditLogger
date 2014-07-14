@@ -11,11 +11,18 @@ There are some predefined dashboards to help you start with the monitoring proce
 Requirements
 ----------
 
-In order to run the ElasticSearchAuditModule you need:
-
 - Sitefinity 7.1 or later with valid license.
-- Internet connectivity to download the nuget packets
+- .NET Framework 4
 - Visual Studio 2012 or later.
+- Microsoft SQL Server 2008R2 or later.
+
+### Prerequisites
+
+Clear the NuGet cache files. To do this:
+
+1. In Windows Explorer, open the **%localappdata%\NuGet\Cache** folder.
+2. Select all files and delete them.
+
 
 Installation
 ----------
