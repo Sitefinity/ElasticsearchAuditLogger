@@ -24,10 +24,20 @@ Clear the NuGet cache files. To do this:
 2. Select all files and delete them.
 
 
-Installation
-----------
+###Installation instructions
 
-The installation of this module is as any other Sitefinity module. You could find more information in [this](http://www.sitefinity.com/blogs/team-blog/2011/07/20/creating_sitefinity_4_content_modules_part_5_module_installation "this") help article.
+1. Open the ElasticsearchAuditLogger repository from GitHub and clone the repository in your desktop.
+
+2. Open your solution in Visual Studio and build the solution.
+
+3. Open your project and copy the Telerik.Sitefinity.Audit.Elasticsearch.dll to the bin folder of your web application.
+
+4. Build and run your Sitefinity application.
+
+5. Go to Administration -> Modules & Services
+
+6. Find the AuditTrail.ElasticSearch module and install it.
+
 
 Additional resources
 ------
