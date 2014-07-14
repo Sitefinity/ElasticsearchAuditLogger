@@ -1,7 +1,7 @@
 # ElasticSearchAuditModule #
 ----------
 
-ElasticSearchAuditModule is a module for Sitefinity CMS that is used in conjunction with Audit Trail module. When both modules are activated it allows an administrator to monitor the actions performed by the various users and processes of the system through [Kibana](http://www.elasticsearch.org/overview/kibana/ "Kibana"). Actions are logged by Type, Name, TimeStamp, user performing the actions, user affected by the action and others. 
+ElasticSearchAuditModule is a module for Sitefinity CMS that is used in conjunction with [Audit Trail module](http://www.sitefinity.com/documentation/documentationarticles/audit-trail). When both modules are activated it allows an administrator to monitor the actions performed by the various users and processes of the system through [Kibana](http://www.elasticsearch.org/overview/kibana/ "Kibana"). Actions are logged by Type, Name, TimeStamp, user performing the actions, user affected by the action and others. 
 
 Predefined dashboards
 ----------
