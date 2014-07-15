@@ -1,6 +1,11 @@
-*.user
-*.suo
-*.jmconfig
 bin/
 obj/
 packages/
+
+*.user
+*.suo
+*.jmconfig
+NuGet.exe
+[Aa]pp.config
+StyleCop.Cache
+*.vspscc

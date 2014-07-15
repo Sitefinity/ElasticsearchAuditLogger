@@ -40,6 +40,7 @@ namespace Telerik.Sitefinity.Audit.Elasticsearch
         #endregion
 
         #region Module Initialization
+
         /// <summary>
         /// Initializes the service with specified settings.
         /// This method is called every time the module is initializing (on application startup by default)
@@ -47,7 +48,7 @@ namespace Telerik.Sitefinity.Audit.Elasticsearch
         /// <param name="settings">The settings.</param>
         public override void Initialize(ModuleSettings settings)
         {
-            base.Initialize(settings);            
+            base.Initialize(settings);
 
             var configManager = ConfigManager.GetManager();
             var modulesConfig = configManager.GetSection<SystemConfig>().ApplicationModules;
@@ -59,7 +60,7 @@ namespace Telerik.Sitefinity.Audit.Elasticsearch
                 configManager.SaveChanges();
                 return;
             }
-            else if(!isAuditTrailModuleRegistered && elasticSearchModule == null)
+            else if (!isAuditTrailModuleRegistered && elasticSearchModule == null)
             {
                 return;
             }
@@ -67,30 +68,27 @@ namespace Telerik.Sitefinity.Audit.Elasticsearch
             App.WorkWith()
                 .Module(settings.Name)
                     .Initialize()
-                    .Localization<ElasticsearchAuditResources>()
                     .Configuration<ElasticsearchAuditConfig>();
 
             var container = ObjectFactory.Container;
             container.RegisterType<IAuditLogger, ElasticsearchAuditLogger>("ElasticsearchAuditLogger");
-            
         }
+
         #endregion
 
         #region Public and overriden methods
-        /// <summary>
-        /// Gets the module configuration.
-        /// </summary>
+
+        /// <inheritdoc />
         protected override ConfigSection GetModuleConfig()
         {
             return Config.Get<ElasticsearchAuditConfig>();
         }
 
-
         public override void Install(SiteInitializer initializer)
         {
-            
         }
-        #endregion                   
+
+        #endregion
 
         #region Private members & constants
 
@@ -99,6 +97,5 @@ namespace Telerik.Sitefinity.Audit.Elasticsearch
         internal const string ModuleDescription = "Logs audit events to an Elasticsearch instance.";
 
         #endregion
-
     }
 }

@@ -14,7 +14,6 @@ namespace Telerik.Sitefinity.Audit.Elasticsearch
         /// <inheritdoc />
         protected override void InitializeDefaultProviders(Sitefinity.Configuration.ConfigElementDictionary<string, Sitefinity.Configuration.DataProviderSettings> providers)
         {
-            
         }
 
         /// <summary>
