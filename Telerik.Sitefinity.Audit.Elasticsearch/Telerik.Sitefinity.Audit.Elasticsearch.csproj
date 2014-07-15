@@ -135,7 +135,6 @@
     <Compile Include="ElasticsearchAuditResources.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
     <None Include="packages.config" />
     <None Include="Settings.StyleCop" />
     <None Include="SignKey.snk" />
