@@ -1,12 +1,12 @@
 # ElasticSearchAuditModule #
 ----------
 
-ElasticSearchAuditModule is a module for Sitefinity CMS that is used in conjunction with [Audit Trail module](http://www.sitefinity.com/documentation/documentationarticles/audit-trail). When both modules are activated it allows an administrator to monitor the actions performed by the various users and processes of the system through [Kibana](http://www.elasticsearch.org/overview/kibana/ "Kibana"). Actions are logged by Type, Name, TimeStamp, user performing the actions, user affected by the action and others. 
+**ElasticSearchAuditModule** is a Sitefinity module used in conjunction with the [Audit Trail module](http://www.sitefinity.com/documentation/documentationarticles/audit-trail). When you activate both modules, the site administrator can monitor the actions performed by the users and also the system processes by using [Kibana](http://www.elasticsearch.org/overview/kibana/ "Kibana"). Actions are logged by *Type*, *Name*, *TimeStamp*, user performing the actions, user affected by the action, and others. 
 
 Predefined dashboards
 ----------
 
-There are some predefined dashboards to help you start with the monitoring process. There is a predefined dashboards for user permissions, content changes and backend access. You could find them in the Dashboards folder.
+Sitefinity has some predefined dashboards to help you start with the monitoring process. There are predefined dashboards for user permissions, content changes, and backend access. You can find the predefined dashboards in the *Dashboards* folder.
 
 Requirements
 ----------
@@ -26,21 +26,22 @@ Clear the NuGet cache files. To do this:
 
 ###Installation instructions
 
-1. Open the ElasticsearchAuditLogger repository from GitHub and clone the repository in your desktop.
+1. In GitHub, open the **ElasticsearchAuditLogger** repository.
+Clone the repository on your desktop.
 
-2. Open your solution in Visual Studio and build the solution.
+2. In Visual Studio, open the solution file you just downloaded and build the solution.
 
-3. Open your project and copy the Telerik.Sitefinity.Audit.Elasticsearch.dll to the bin folder of your web application.
+3. Open your project and copy the **Telerik.Sitefinity.Audit.Elasticsearch.dll** to the **bin** folder of your web application.
 
 4. Build and run your Sitefinity application.
 
-5. Go to Administration -> Modules & Services
+5. Navigate to *Administration* -> *Modules & Services*.
 
-6. Find the AuditTrail.ElasticSearch module and install it.
+6. Browse to the **AuditTrail.ElasticSearch** module and install it.
 
 
 Additional resources
 ------
-The following youtube video demonstrates the Audit Trail feature and its integration with Kibana and Elasticsearch.  
+The following YouTube video demonstrates the Audit Trail feature and its integration with Kibana and Elasticsearch:  
 [![Sitefinity's Audit Trail module](https://raw.githubusercontent.com/Sitefinity/ElasticsearchAuditLogger/master/video.png?token=3206860__eyJzY29wZSI6IlJhd0Jsb2I6U2l0ZWZpbml0eS9FbGFzdGljc2VhcmNoQXVkaXRMb2dnZXIvbWFzdGVyL3ZpZGVvLnBuZyIsImV4cGlyZXMiOjE0MDU2OTAxNzZ9--b588ea9ea25b3f9e57c708d4409c2b6e6ecc9466)](https://www.youtube.com/watch?v=R6enydPS2tk)
 
