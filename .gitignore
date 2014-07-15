@@ -1,6 +1,9 @@
-*.user
-*.suo
-*.jmconfig
 bin/
 obj/
 packages/
+
+*.user
+*.suo
+*.jmconfig
+StyleCop.Cache
+[Aa]pp.config
