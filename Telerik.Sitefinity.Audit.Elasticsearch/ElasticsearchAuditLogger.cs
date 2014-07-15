@@ -3,10 +3,9 @@ using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using Nest;
+using Telerik.Sitefinity.AuditTrail;
 using Telerik.Sitefinity.Configuration;
 using Telerik.Sitefinity.Web.Events;
-using Telerik.Sitefinity.AuditTrail;
-
 
 namespace Telerik.Sitefinity.Audit.Elasticsearch
 {
@@ -19,7 +18,6 @@ namespace Telerik.Sitefinity.Audit.Elasticsearch
 
             this.client = new ElasticClient(setting);
         }
-
 
         [SuppressMessage("Microsoft.Design", "CA1031:DoNotCatchGeneralExceptionTypes",
             Justification = "We want to catch any exception that occurs and log it for further investigation.")]
