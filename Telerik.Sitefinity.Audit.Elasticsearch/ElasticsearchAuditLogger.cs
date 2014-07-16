@@ -9,7 +9,10 @@ using Telerik.Sitefinity.Web.Events;
 
 namespace Telerik.Sitefinity.Audit.Elasticsearch
 {
-    internal class ElasticsearchAuditLogger : IAuditLogger
+    /// <summary>
+    /// The Audit logger that logs data to Elasticsearch
+    /// </summary>
+    public class ElasticsearchAuditLogger : IAuditLogger
     {
         public ElasticsearchAuditLogger()
         {

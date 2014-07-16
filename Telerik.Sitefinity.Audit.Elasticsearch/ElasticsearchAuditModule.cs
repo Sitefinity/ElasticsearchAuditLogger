@@ -46,6 +46,7 @@ namespace Telerik.Sitefinity.Audit.Elasticsearch
         /// This method is called every time the module is initializing (on application startup by default)
         /// </summary>
         /// <param name="settings">The settings.</param>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1062:Validate arguments of public methods", MessageId = "0", Justification = "The settings argument is checked in the base method.")]
         public override void Initialize(ModuleSettings settings)
         {
             base.Initialize(settings);
@@ -66,9 +67,9 @@ namespace Telerik.Sitefinity.Audit.Elasticsearch
             }
 
             App.WorkWith()
-                .Module(settings.Name)
-                    .Initialize()
-                    .Configuration<ElasticsearchAuditConfig>();
+               .Module(settings.Name)
+               .Initialize()
+               .Configuration<ElasticsearchAuditConfig>();
 
             var container = ObjectFactory.Container;
             container.RegisterType<IAuditLogger, ElasticsearchAuditLogger>("ElasticsearchAuditLogger");
