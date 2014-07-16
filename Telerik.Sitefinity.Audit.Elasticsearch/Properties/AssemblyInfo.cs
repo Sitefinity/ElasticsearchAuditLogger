@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System;
+using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Web;
 
@@ -13,6 +14,8 @@ using System.Web;
 [assembly: AssemblyCopyright("Copyright © Telerik 2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
+[assembly: CLSCompliant(true)]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1020:AvoidNamespacesWithFewTypes", Scope = "namespace", Target = "Telerik.Sitefinity.Audit.Elasticsearch")]
 
 // Registers ElasticsearchInstaller.PreApplicationStart() to be executed prior to the application start
 [assembly: PreApplicationStartMethod(typeof(Telerik.Sitefinity.Audit.Elasticsearch.ElasticsearchAuditInstaller), "PreApplicationStart")]
