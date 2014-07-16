@@ -6,7 +6,6 @@ using Nest;
 using Telerik.Sitefinity.AuditTrail;
 using Telerik.Sitefinity.Configuration;
 using Telerik.Sitefinity.Web.Events;
-using System.Diagnostics.CodeAnalysis;
 
 namespace Telerik.Sitefinity.Audit.Elasticsearch
 {
