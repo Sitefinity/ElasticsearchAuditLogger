@@ -22,7 +22,7 @@ namespace Telerik.Sitefinity.Audit.Elasticsearch
             this.client = new ElasticClient(setting);
         }
 
-        [SuppressMessage("Microsoft.Design", "CA1031:DoNotCatchGeneralExceptionTypes",
+        [SuppressMessage("Microsoft.Design", "CA1031",
             Justification = "We want to catch any exception that occurs and log it for further investigation.")]
         public void Log(IAuditInfo info)
         {
