@@ -1,6 +1,8 @@
 # ElasticSearchAuditModule #
 ----------
 
+[![Build Status](http://sdk-jenkins-ci.cloudapp.net/buildStatus/icon?job=Telerik.Sitefinity.ElasticSearchAuditLogger.CI)](http://sdk-jenkins-ci.cloudapp.net/job/Telerik.Sitefinity.ElasticSearchAuditLogger.CI/)
+
 **ElasticSearchAuditModule** is a Sitefinity module used in conjunction with the [Audit Trail module](http://www.sitefinity.com/documentation/documentationarticles/audit-trail). When you activate both modules, the site administrator can monitor the actions performed by the users and also the system processes by using [Kibana](http://www.elasticsearch.org/overview/kibana/ "Kibana"). Actions are logged by *Type*, *Name*, *TimeStamp*, user performing the actions, user affected by the action, and others. 
 
 Predefined dashboards
