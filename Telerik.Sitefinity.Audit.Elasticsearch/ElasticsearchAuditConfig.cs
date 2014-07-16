@@ -19,7 +19,7 @@ namespace Telerik.Sitefinity.Audit.Elasticsearch
         /// <summary>
         /// Gets or sets a value indicating the address of the Elasticsearch server.
         /// </summary>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1056:UriPropertiesShouldNotBeStrings", Justification="Sitefinity configuration does not support System.Uri in serialization.")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1056:UriPropertiesShouldNotBeStrings", Justification = "Sitefinity configuration does not support System.Uri in serialization.")]
         [ConfigurationProperty("ElasticsearchUri", DefaultValue = "http://localhost:9200/")]
         [ObjectInfo(Title = "ElasticsearchUri", Description = "The address of the Elasticsearch server")]
         public string ElasticsearchUri
