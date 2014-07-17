@@ -45,6 +45,12 @@ Clone the repository on your desktop.
 
 6. Browse to the **AuditTrail.ElasticSearch** module and install it.
 
+Contributing
+------
+
+We'd love to get contributions from you! Take a look at the
+[Contribution Documents](CONTRIBUTING.md) to see how to get your changes merged
+in.
 
 Additional resources
 ------
