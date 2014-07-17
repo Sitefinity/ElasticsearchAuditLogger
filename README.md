@@ -14,7 +14,7 @@ Requirements
 ----------
 
 - Sitefinity 7.1 or later with valid license.
-- .NET Framework 4
+- .NET Framework 4.
 - Visual Studio 2012 or later.
 - Microsoft SQL Server 2008R2 or later.
 
