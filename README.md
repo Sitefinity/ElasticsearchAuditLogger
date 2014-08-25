@@ -56,7 +56,7 @@ Use this view to display user login/logout actions in Sitefinity.
 - [Content dashboard](https://gist.github.com/anonymous/98f30017728ba5060c1c "Content")  
 Use this view to display changes of content items in Sitefinity.
 
-- [UserUpdates dashboard](https://gist.github.com/anonymous/469c373754a7e314ac53 "User Updates")`   
+- [UserUpdates dashboard](https://gist.github.com/anonymous/469c373754a7e314ac53 "User Updates")   
 Use this view to display changes of users in Sitefinity.
 
 The custom dashboards are also included in this repository. 
