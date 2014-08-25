@@ -45,6 +45,22 @@ Clone the repository on your desktop.
 
 6. Browse to the **AuditTrail.ElasticSearch** module and install it.
 
+Custom Kibana Dashboards
+---
+*Kibana* comes with a built-in default Sample Dashboard for displaying information and records. You can also load additional dashboard files for custom views, either from local files, or Gist storage on GitHub.  
+Sitefinity has the following Kibana dashboard files shared as Gist snippets:
+
+- [BackendAccess dashboard](https://gist.github.com/anonymous/6ea0d190e50771266829 "BackendAccess")  
+Use this view to display user login/logout actions in Sitefinity.
+
+- [Content dashboard](https://gist.github.com/anonymous/98f30017728ba5060c1c "Content")  
+Use this view to display changes of content items in Sitefinity.
+
+- [UserUpdates dashboard](https://gist.github.com/anonymous/469c373754a7e314ac53 "User Updates")   
+Use this view to display changes of users in Sitefinity.
+
+The custom dashboards are also included in this repository. 
+
 Contributing
 ------
 
@@ -56,4 +72,3 @@ Additional resources
 ------
 The following YouTube video demonstrates the Audit Trail feature and its integration with Kibana and Elasticsearch:  
 [![Sitefinity's Audit Trail module](https://raw.githubusercontent.com/Sitefinity/ElasticsearchAuditLogger/master/video.png?token=3206860__eyJzY29wZSI6IlJhd0Jsb2I6U2l0ZWZpbml0eS9FbGFzdGljc2VhcmNoQXVkaXRMb2dnZXIvbWFzdGVyL3ZpZGVvLnBuZyIsImV4cGlyZXMiOjE0MDU2OTAxNzZ9--b588ea9ea25b3f9e57c708d4409c2b6e6ecc9466)](https://www.youtube.com/watch?v=R6enydPS2tk)
-
