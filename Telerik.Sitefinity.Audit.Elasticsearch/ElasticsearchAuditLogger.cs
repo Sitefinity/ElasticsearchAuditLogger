@@ -14,6 +14,9 @@ namespace Telerik.Sitefinity.Audit.Elasticsearch
     /// </summary>
     public class ElasticsearchAuditLogger : IAuditLogger
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ElasticsearchAuditLogger"/> class.
+        /// </summary>
         public ElasticsearchAuditLogger()
         {
             var uri = new Uri(Config.Get<ElasticsearchAuditConfig>().ElasticsearchUri);
@@ -22,6 +25,10 @@ namespace Telerik.Sitefinity.Audit.Elasticsearch
             this.client = new ElasticClient(setting);
         }
 
+        /// <summary>
+        /// Logs the specified info.
+        /// </summary>
+        /// <param name="info">The info.</param>
         [SuppressMessage("Microsoft.Design", "CA1031",
             Justification = "We want to catch any exception that occurs and log it for further investigation.")]
         public void Log(IAuditInfo info)

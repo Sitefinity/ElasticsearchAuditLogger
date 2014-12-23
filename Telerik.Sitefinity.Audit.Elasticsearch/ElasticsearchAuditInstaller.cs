@@ -13,9 +13,9 @@ namespace Telerik.Sitefinity.Audit.Elasticsearch
     /// <remarks>
     /// This installer is registered in the /Properties/AssemblyInfo.cs file
     /// The purpose of it is to register the module in Sitefinity automatically.
-    /// The User will have to enable the module from Administration -> Modules & Services
+    /// The User will have to enable the module from Administration -> Modules &amp; Services
     /// </remarks>
-    /// <see cref="http://www.sitefinity.com/blogs/peter-marinovs-blog/2013/03/20/creating-self-installing-widgets-and-modules-in-sitefinity"/>
+    /// <a href="http://www.sitefinity.com/blogs/peter-marinovs-blog/2013/03/20/creating-self-installing-widgets-and-modules-in-sitefinity">Creating Self installing Widgets And Modules In Sitefinity</a>
     public static class ElasticsearchAuditInstaller
     {
         #region Public methods

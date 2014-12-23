@@ -85,6 +85,10 @@ namespace Telerik.Sitefinity.Audit.Elasticsearch
             return Config.Get<ElasticsearchAuditConfig>();
         }
 
+        /// <summary>
+        /// Installs the specified initializer.
+        /// </summary>
+        /// <param name="initializer">The initializer.</param>
         public override void Install(SiteInitializer initializer)
         {
         }
@@ -92,7 +96,10 @@ namespace Telerik.Sitefinity.Audit.Elasticsearch
         #endregion
 
         #region Private members & constants
-
+        
+        /// <summary>
+        /// The Module Name
+        /// </summary>
         public const string ModuleName = "ElasticsearchAudit";
         internal const string ModuleTitle = "Audit Trail - Elasticsearch";
         internal const string ModuleDescription = "Logs audit events to an Elasticsearch instance.";

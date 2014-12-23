@@ -11,7 +11,7 @@ namespace Telerik.Sitefinity.Audit.Elasticsearch
     /// You can use Sitefinity Thunder to edit this file.
     /// To do this, open the file's context menu and select Edit with Thunder.
     /// </remarks>
-    /// <see cref="http://www.sitefinity.com/documentation/documentationarticles/developers-guide/how-to/how-to-import-events-from-facebook/creating-the-resources-class"/>
+    /// <a href="http://docs.sitefinity.com/import-events-from-facebook-create-the-resources-class">Import events from Facebook: Create the resources class</a>
     public class ElasticsearchAuditResources : Resource
     {
     }
