@@ -17,6 +17,7 @@ Requirements
 - .NET Framework 4.
 - Visual Studio 2012 or later.
 - Microsoft SQL Server 2008R2 or later.
+- Kibana 3.x (Kibana 4.x does not have this functionality yet.)
 
 ### Prerequisites
 
