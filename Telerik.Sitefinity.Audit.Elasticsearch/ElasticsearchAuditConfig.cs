@@ -35,5 +35,23 @@ namespace Telerik.Sitefinity.Audit.Elasticsearch
                 this["ElasticsearchUri"] = value;
             }
         }
+
+        /// <summary>
+        /// Gets or sets a value indicating the name of the Elasticsearch index.
+        /// </summary>        
+        [ConfigurationProperty("IndexName", DefaultValue = "index")]
+        [ObjectInfo(Title = "InexName", Description = "The name of the Elasticsearch index")]
+        public string IndexName
+        {
+            get
+            {
+                return (string)this["InexName"];
+            }
+
+            set
+            {
+                this["InexName"] = value;
+            }
+        }
     }
 }

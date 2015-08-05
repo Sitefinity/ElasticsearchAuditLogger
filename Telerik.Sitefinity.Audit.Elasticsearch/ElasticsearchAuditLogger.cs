@@ -19,8 +19,8 @@ namespace Telerik.Sitefinity.Audit.Elasticsearch
         /// </summary>
         public ElasticsearchAuditLogger()
         {
-            var uri = new Uri(Config.Get<ElasticsearchAuditConfig>().ElasticsearchUri);
-            var setting = new ConnectionSettings(uri, IndexName);
+            var uri = new Uri(Config.Get<ElasticsearchAuditConfig>().ElasticsearchUri);            
+            var setting = new ConnectionSettings(uri, this.IndexName);
 
             this.client = new ElasticClient(setting);
         }
@@ -39,7 +39,7 @@ namespace Telerik.Sitefinity.Audit.Elasticsearch
 
                 if (info == null) return;
                 
-                this.client.Raw.Index(IndexName, AuditTypeFriendlyName, info.Fields);
+                this.client.Raw.Index(this.IndexName, AuditTypeFriendlyName, info.Fields);
             }
             catch (Exception e)
             {
@@ -52,8 +52,20 @@ namespace Telerik.Sitefinity.Audit.Elasticsearch
             }
         }
 
-        private readonly ElasticClient client;
-        private const string IndexName = "index";
+        public string IndexName
+        {
+            get
+            {
+                return Config.Get<ElasticsearchAuditConfig>().IndexName;
+            }
+            set
+            {
+                Config.Get<ElasticsearchAuditConfig>().IndexName=value;
+            }
+        }
+
+
+        private readonly ElasticClient client;        
         private const string AuditTypeFriendlyName = "AUDIT";        
     }
 }
