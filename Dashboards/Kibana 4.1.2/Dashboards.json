@@ -1,0 +1,165 @@
+[
+  {
+    "_id": "BackendDashboard",
+    "_type": "dashboard",
+    "_source": {
+      "title": "BackendDashboard",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"id\":\"Backend-Visualization\",\"type\":\"visualization\",\"size_x\":4,\"size_y\":3,\"col\":1,\"row\":1},{\"id\":\"BackendTable\",\"type\":\"search\",\"size_x\":7,\"size_y\":8,\"col\":5,\"row\":1,\"columns\":[\"UserName\",\"LoginResult\",\"UserRoles\",\"UserIP\"],\"sort\":[\"Timestamp\",\"desc\"]}]",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}}}]}"
+      }
+    }
+  },
+  {
+    "_id": "UserUpdates-Dashboard",
+    "_type": "dashboard",
+    "_source": {
+      "title": "UserUpdates Dashboard",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"id\":\"UserUpdates-Visualization\",\"type\":\"visualization\",\"size_x\":3,\"size_y\":3,\"col\":1,\"row\":1},{\"id\":\"UserUpdates-Table\",\"type\":\"search\",\"size_x\":9,\"size_y\":6,\"col\":4,\"row\":1,\"columns\":[\"Messages\",\"UserName\",\"UserRoles\",\"UserIP\",\"UserID\"],\"sort\":[\"Timestamp\",\"desc\"]}]",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}}}]}"
+      }
+    }
+  },
+  {
+    "_id": "Content-Dashboard",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Content Dashboard",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"col\":1,\"columns\":[\"ItemTitle\",\"ItemUrl\",\"ItemType\",\"EventType\",\"ItemLifecycleStatus\",\"UserName\",\"EventTags\",\"ItemStatus\",\"Messages\",\"SiteName\",\"ItemLanguage\"],\"id\":\"Content-Table\",\"row\":3,\"size_x\":12,\"size_y\":8,\"sort\":[\"Timestamp\",\"desc\"],\"type\":\"search\"},{\"col\":3,\"id\":\"Content-Visualization\",\"row\":1,\"size_x\":8,\"size_y\":2,\"type\":\"visualization\"}]",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}}}]}"
+      }
+    }
+  },
+  {
+    "_id": "Content-Table",
+    "_type": "search",
+    "_source": {
+      "title": "Content Table",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "ItemTitle",
+        "ItemUrl",
+        "ItemType",
+        "EventType",
+        "ItemLifecycleStatus",
+        "UserName",
+        "EventTags",
+        "ItemStatus",
+        "Messages",
+        "SiteName",
+        "ItemLanguage"
+      ],
+      "sort": [
+        "Timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"index\",\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"fragment_size\":2147483647},\"filter\":[],\"query\":{\"query_string\":{\"query\":\"_exists_:ItemTitle AND (Action=Updated OR Action= New OR Action=Deleted) OR (Action=Updated AND ItemType=Page) OR (Action=Update AND ItemType=Image)\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "BackendTable",
+    "_type": "search",
+    "_source": {
+      "title": "BackendTable",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "UserName",
+        "LoginResult",
+        "UserRoles",
+        "UserIP"
+      ],
+      "sort": [
+        "Timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"index\",\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"fragment_size\":2147483647},\"filter\":[],\"query\":{\"query_string\":{\"query\":\"EventTags:Unsuccessful login OR (UserRoles:Administrators AND (EventTags:Login OR EventTags:Logout))\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "UserUpdates-Table",
+    "_type": "search",
+    "_source": {
+      "title": "UserUpdates Table",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "Messages",
+        "UserName",
+        "UserRoles",
+        "UserIP",
+        "UserID"
+      ],
+      "sort": [
+        "Timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"index\",\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"fragment_size\":2147483647},\"filter\":[],\"query\":{\"query_string\":{\"query\":\"EventTags:created OR EventTags:deleted OR ItemType:User\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "Backend-Visualization",
+    "_type": "visualization",
+    "_source": {
+      "title": "Backend Visualization",
+      "visState": "{\n  \"type\": \"histogram\",\n  \"params\": {\n    \"shareYAxis\": true,\n    \"addTooltip\": true,\n    \"addLegend\": true,\n    \"scale\": \"linear\",\n    \"mode\": \"stacked\",\n    \"times\": [],\n    \"addTimeMarker\": false,\n    \"defaultYExtents\": false,\n    \"setYExtents\": false,\n    \"yAxis\": {}\n  },\n  \"aggs\": [\n    {\n      \"id\": \"1\",\n      \"type\": \"count\",\n      \"schema\": \"metric\",\n      \"params\": {}\n    },\n    {\n      \"id\": \"2\",\n      \"type\": \"filters\",\n      \"schema\": \"group\",\n      \"params\": {\n        \"filters\": [\n          {\n            \"input\": {\n              \"query\": {\n                \"query_string\": {\n                  \"query\": \"EventTags: Login\",\n                  \"analyze_wildcard\": true\n                }\n              }\n            },\n            \"label\": \"\"\n          },\n          {\n            \"input\": {\n              \"query\": {\n                \"query_string\": {\n                  \"query\": \"EventTags: Logout\",\n                  \"analyze_wildcard\": true\n                }\n              }\n            }\n          },\n          {\n            \"input\": {\n              \"query\": {\n                \"query_string\": {\n                  \"query\": \"EventTags: Unsuccessful\",\n                  \"analyze_wildcard\": true\n                }\n              }\n            },\n            \"label\": \"\"\n          }\n        ]\n      }\n    }\n  ],\n  \"listeners\": {}\n}",
+      "description": "",
+      "savedSearchId": "BackendTable",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\n  \"filter\": []\n}"
+      }
+    }
+  },
+  {
+    "_id": "UserUpdates-Visualization",
+    "_type": "visualization",
+    "_source": {
+      "title": "UserUpdates Visualization",
+      "visState": "{\"aggs\":[{\"id\":\"1\",\"params\":{},\"schema\":\"metric\",\"type\":\"count\"},{\"id\":\"2\",\"params\":{\"filters\":[{\"input\":{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"EventTags:Created\"}}},\"label\":\"\"},{\"input\":{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"EventTags:Deleted\"}}}}]},\"schema\":\"group\",\"type\":\"filters\"}],\"listeners\":{},\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"defaultYExtents\":false,\"mode\":\"stacked\",\"scale\":\"linear\",\"setYExtents\":false,\"shareYAxis\":true,\"times\":[],\"yAxis\":{}},\"type\":\"histogram\"}",
+      "description": "",
+      "savedSearchId": "UserUpdates-Table",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "Content-Visualization",
+    "_type": "visualization",
+    "_source": {
+      "title": "Content Visualization",
+      "visState": "{\"aggs\":[{\"id\":\"1\",\"params\":{},\"schema\":\"metric\",\"type\":\"count\"},{\"id\":\"7\",\"params\":{\"customInterval\":\"2h\",\"extended_bounds\":{},\"field\":\"Timestamp\",\"interval\":\"w\",\"min_doc_count\":1,\"row\":false},\"schema\":\"split\",\"type\":\"date_histogram\"},{\"id\":\"5\",\"params\":{\"customInterval\":\"3h\",\"extended_bounds\":{},\"field\":\"Timestamp\",\"interval\":\"custom\",\"min_doc_count\":1},\"schema\":\"segment\",\"type\":\"date_histogram\"}],\"listeners\":{},\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"defaultYExtents\":false,\"mode\":\"stacked\",\"scale\":\"linear\",\"setYExtents\":false,\"shareYAxis\":true,\"spyPerPage\":10,\"times\":[],\"yAxis\":{}},\"type\":\"histogram\"}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"index\":\"index\",\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}}}"
+      }
+    }
+  }
+]

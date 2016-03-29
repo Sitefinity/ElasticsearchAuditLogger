@@ -17,7 +17,9 @@ Requirements
 - .NET Framework 4.
 - Visual Studio 2012 or later.
 - Microsoft SQL Server 2008R2 or later.
-- Kibana 3.x (Kibana 4.x does not have this functionality yet.)
+- One of the following tested combinations of versions of **ElasticSearch** and **Kibana**:
+	- ***ElasticSearch 1.2.1*** and ***Kibana 3.1.0***
+	- ***ElasticSearch 1.7.3*** and ***Kibana 4.1.2***
 
 ### Prerequisites
 
@@ -46,21 +48,9 @@ Clone the repository on your desktop.
 
 6. Browse to the **AuditTrail.ElasticSearch** module and install it.
 
-Custom Kibana Dashboards
----
-*Kibana* comes with a built-in default Sample Dashboard for displaying information and records. You can also load additional dashboard files for custom views, either from local files, or Gist storage on GitHub.  
-Sitefinity has the following Kibana dashboard files shared as Gist snippets:
-
-- [BackendAccess dashboard](https://gist.github.com/anonymous/6ea0d190e50771266829 "BackendAccess")  
-Use this view to display user login/logout actions in Sitefinity.
-
-- [Content dashboard](https://gist.github.com/anonymous/98f30017728ba5060c1c "Content")  
-Use this view to display changes of content items in Sitefinity.
-
-- [UserUpdates dashboard](https://gist.github.com/anonymous/469c373754a7e314ac53 "User Updates")   
-Use this view to display changes of users in Sitefinity.
-
-The custom dashboards are also included in this repository. 
+### ElasticSearch and Kibana installation and configuration  ###
+- [ElasticSearch 1.2.1 and Kibana 3.1.0](ElasticSearch1.2.1AndKibana3.1.0.md) 
+- [ElasticSearch 1.7.3 and Kibana 4.1.2](ElasticSearch1.7.3AndKibana4.1.2.md)
 
 Contributing
 ------
@@ -69,7 +59,4 @@ We'd love to get contributions from you! Take a look at the
 [Contribution Documents](CONTRIBUTING.md) to see how to get your changes merged
 in.
 
-Additional resources
-------
-The following YouTube video demonstrates the Audit Trail feature and its integration with Kibana and Elasticsearch:  
-[![Sitefinity's Audit Trail module](https://raw.githubusercontent.com/Sitefinity/ElasticsearchAuditLogger/master/video.png?token=3206860__eyJzY29wZSI6IlJhd0Jsb2I6U2l0ZWZpbml0eS9FbGFzdGljc2VhcmNoQXVkaXRMb2dnZXIvbWFzdGVyL3ZpZGVvLnBuZyIsImV4cGlyZXMiOjE0MDU2OTAxNzZ9--b588ea9ea25b3f9e57c708d4409c2b6e6ecc9466)](https://www.youtube.com/watch?v=R6enydPS2tk)
+
