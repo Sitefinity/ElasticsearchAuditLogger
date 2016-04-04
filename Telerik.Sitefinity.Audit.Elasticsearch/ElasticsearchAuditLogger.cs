@@ -58,12 +58,12 @@ namespace Telerik.Sitefinity.Audit.Elasticsearch
             {
                 return Config.Get<ElasticsearchAuditConfig>().IndexName;
             }
+
             set
             {
-                Config.Get<ElasticsearchAuditConfig>().IndexName=value;
+                Config.Get<ElasticsearchAuditConfig>().IndexName = value;
             }
         }
-
 
         private readonly ElasticClient client;        
         private const string AuditTypeFriendlyName = "AUDIT";        
