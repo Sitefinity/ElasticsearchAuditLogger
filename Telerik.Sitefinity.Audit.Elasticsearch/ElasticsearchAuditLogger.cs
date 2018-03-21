@@ -20,7 +20,7 @@ namespace Telerik.Sitefinity.Audit.Elasticsearch
         public ElasticsearchAuditLogger()
         {
             var uri = new Uri(Config.Get<ElasticsearchAuditConfig>().ElasticsearchUri);
-            var client = new ElasticClient(uri);
+            this.client = new ElasticClient(uri);
         }
 
         /// <summary>
@@ -37,9 +37,9 @@ namespace Telerik.Sitefinity.Audit.Elasticsearch
 
                 if (info == null) return;
                 
-                var request = new IndexRequest<IDictionary<string, object>>(new IndexName() { Name = this.IndexName }, new TypeName() { Name = AuditTypeFriendlyName });
+                var request = new IndexRequest<IDictionary<string, object>>(new IndexName() { Name = this.IndexName }, new TypeName() { Name = AuditTypeFriendlyName }, new Id(Guid.NewGuid().ToString()));
+                request.Document = info.Fields;
                 this.client.Index(request);
-                //// this.client.Index( <byte[]>(this.IndexName, AuditTypeFriendlyName, Guid.NewGuid().ToString(), info.Fields);
             }
             catch (Exception e)
             {
