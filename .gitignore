@@ -9,3 +9,4 @@ NuGet.exe
 [Aa]pp.config
 StyleCop.Cache
 *.vspscc
+/.vs
