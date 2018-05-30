@@ -1,6 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
-using System.Linq;
 using System.Text;
 using Nest;
 using Telerik.Sitefinity.AuditTrail;
@@ -19,10 +19,8 @@ namespace Telerik.Sitefinity.Audit.Elasticsearch
         /// </summary>
         public ElasticsearchAuditLogger()
         {
-            var uri = new Uri(Config.Get<ElasticsearchAuditConfig>().ElasticsearchUri);            
-            var setting = new ConnectionSettings(uri, this.IndexName);
-
-            this.client = new ElasticClient(setting);
+            var uri = new Uri(Config.Get<ElasticsearchAuditConfig>().ElasticsearchUri);
+            this.client = new ElasticClient(uri);
         }
 
         /// <summary>
@@ -39,7 +37,9 @@ namespace Telerik.Sitefinity.Audit.Elasticsearch
 
                 if (info == null) return;
                 
-                this.client.Raw.Index(this.IndexName, AuditTypeFriendlyName, info.Fields);
+                var request = new IndexRequest<IDictionary<string, object>>(new IndexName() { Name = this.IndexName }, new TypeName() { Name = AuditTypeFriendlyName }, new Id(Guid.NewGuid().ToString()));
+                request.Document = info.Fields;
+                this.client.Index(request);
             }
             catch (Exception e)
             {

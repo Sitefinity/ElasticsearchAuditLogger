@@ -9,4 +9,4 @@ NuGet.exe
 [Aa]pp.config
 StyleCop.Cache
 *.vspscc
-/.vs/Telerik.Sitefinity.Audit.Elasticsearch/v15/Server/sqlite3
+/.vs
