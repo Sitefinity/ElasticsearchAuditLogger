@@ -17,7 +17,7 @@ Requirements
 
 - Sitefinity 7.1 or later with valid license.
 - .NET Framework 4.
-- Visual Studio 2012 or later.
+- Visual Studio 2017 or later.
 - Microsoft SQL Server 2008R2 or later.
 - One of the following tested combinations of versions of **ElasticSearch** and **Kibana**:
 	- ***ElasticSearch 1.2.1*** and ***Kibana 3.1.0***
