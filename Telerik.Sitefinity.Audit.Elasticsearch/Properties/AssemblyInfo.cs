@@ -11,7 +11,7 @@ using System.Web;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Telerik")]
 [assembly: AssemblyProduct("Telerik Sitefintiy CMS")]
-[assembly: AssemblyCopyright("Copyright © 2005-2018 Telerik EAD. All rights reserved.")]
+[assembly: AssemblyCopyright("Copyright © 2005-2018 Progress Software Corporation and/or one of its subsidiaries or affiliates. All rights reserved.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: CLSCompliant(true)]
