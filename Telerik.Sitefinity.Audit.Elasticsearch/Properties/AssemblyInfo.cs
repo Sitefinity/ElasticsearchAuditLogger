@@ -19,9 +19,6 @@ using System.Web;
 // Suppresses the CA1020:AvoidNamespacesWithFewTypes in the solution
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1020:AvoidNamespacesWithFewTypes", Scope = "namespace", Target = "Telerik.Sitefinity.Audit.Elasticsearch", Justification = "Current implementation holds namespaces that contain fewer than five types.")]
 
-// Registers ElasticsearchInstaller.PreApplicationStart() to be executed prior to the application start
-[assembly: PreApplicationStartMethod(typeof(Telerik.Sitefinity.Audit.Elasticsearch.ElasticsearchAuditInstaller), "PreApplicationStart")]
-
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 
 // COM, set the ComVisible attribute to true on that type.
