@@ -9,8 +9,8 @@ using System.Web;
 [assembly: AssemblyTitle("Telerik.Sitefinity.Audit.Elasticsearch")]
 [assembly: AssemblyDescription("ElasticSearchAuditModule is a Sitefinity module used in conjunction with the Audit Trail module(http://www.sitefinity.com/documentation/documentationarticles/audit-trail). When you activate both modules, the site administrator can monitor the actions performed by the users and also the system processes by using Kibana (http://www.elasticsearch.org/overview/kibana/). Actions are logged by Type, Name, TimeStamp, user performing the actions, user affected by the action, and others.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Telerik")]
-[assembly: AssemblyProduct("Telerik Sitefintiy CMS")]
+[assembly: AssemblyCompany("Progress")]
+[assembly: AssemblyProduct("Progress Sitefintiy CMS")]
 [assembly: AssemblyCopyright("Copyright © 2005-2019 Progress Software Corporation and/or one of its subsidiaries or affiliates. All rights reserved.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -37,5 +37,5 @@ using System.Web;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("11.0.6700.0")]
-[assembly: AssemblyFileVersion("11.0.6700.0")]
+[assembly: AssemblyVersion("12.0.7000.0")]
+[assembly: AssemblyFileVersion("12.0.7000.0")]
