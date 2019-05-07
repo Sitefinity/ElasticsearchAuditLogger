@@ -9,8 +9,8 @@ using System.Web;
 [assembly: AssemblyTitle("Telerik.Sitefinity.Audit.Elasticsearch")]
 [assembly: AssemblyDescription("ElasticSearchAuditModule is a Sitefinity module used in conjunction with the Audit Trail module(http://www.sitefinity.com/documentation/documentationarticles/audit-trail). When you activate both modules, the site administrator can monitor the actions performed by the users and also the system processes by using Kibana (http://www.elasticsearch.org/overview/kibana/). Actions are logged by Type, Name, TimeStamp, user performing the actions, user affected by the action, and others.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Telerik")]
-[assembly: AssemblyProduct("Telerik Sitefintiy CMS")]
+[assembly: AssemblyCompany("Progress")]
+[assembly: AssemblyProduct("Progress Sitefintiy CMS")]
 [assembly: AssemblyCopyright("Copyright © 2005-2019 Progress Software Corporation and/or one of its subsidiaries or affiliates. All rights reserved.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -18,9 +18,6 @@ using System.Web;
 
 // Suppresses the CA1020:AvoidNamespacesWithFewTypes in the solution
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1020:AvoidNamespacesWithFewTypes", Scope = "namespace", Target = "Telerik.Sitefinity.Audit.Elasticsearch", Justification = "Current implementation holds namespaces that contain fewer than five types.")]
-
-// Registers ElasticsearchInstaller.PreApplicationStart() to be executed prior to the application start
-[assembly: PreApplicationStartMethod(typeof(Telerik.Sitefinity.Audit.Elasticsearch.ElasticsearchAuditInstaller), "PreApplicationStart")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 
@@ -40,5 +37,5 @@ using System.Web;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("11.0.6700.0")]
-[assembly: AssemblyFileVersion("11.0.6700.0")]
+[assembly: AssemblyVersion("12.0.7000.0")]
+[assembly: AssemblyFileVersion("12.0.7000.0")]

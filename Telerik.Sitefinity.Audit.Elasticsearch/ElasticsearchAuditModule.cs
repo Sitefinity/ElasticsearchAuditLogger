@@ -2,9 +2,16 @@
 using System.Linq;
 using Telerik.Microsoft.Practices.Unity;
 using Telerik.Sitefinity.Abstractions;
+using Telerik.Sitefinity.Audit.Elasticsearch;
 using Telerik.Sitefinity.AuditTrail;
 using Telerik.Sitefinity.Configuration;
 using Telerik.Sitefinity.Services;
+
+[assembly: SitefinityModule(ElasticsearchAuditModule.ModuleName,
+                            typeof(ElasticsearchAuditModule),
+                            ElasticsearchAuditModule.ModuleTitle,
+                            ElasticsearchAuditModule.ModuleDescription,
+                            StartupType.Disabled)]
 
 namespace Telerik.Sitefinity.Audit.Elasticsearch
 {
