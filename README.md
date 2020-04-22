@@ -19,9 +19,9 @@ Requirements
 - .NET Framework 4.
 - Visual Studio 2017 or later.
 - Microsoft SQL Server 2008R2 or later.
-- One of the following tested combinations of versions of **ElasticSearch** and **Kibana**:
-	- ***ElasticSearch 1.2.1*** and ***Kibana 3.1.0***
-	- ***ElasticSearch 1.7.3*** and ***Kibana 4.1.2***
+- The following tested combinations of versions of **ElasticSearch** and **Kibana**:
+	- ***ElasticSearch 7.5.1*** and ***Kibana 7.5.1***
+
 
 ### Prerequisites
 
@@ -51,9 +51,7 @@ Clone the repository on your desktop.
 6. Browse to the **AuditTrail.ElasticSearch** module and install it.
 
 ### ElasticSearch and Kibana installation and configuration  ###
-- [ElasticSearch 1.2.1 and Kibana 3.1.0](ElasticSearch1.2.1AndKibana3.1.0.md) 
-- [ElasticSearch 1.7.3 and Kibana 4.1.2](ElasticSearch1.7.3AndKibana4.1.2.md)
-
+- [ElasticSearch 7.5.1 and Kibana 7.5.1](ElasticSearch7.5.1AndKibana7.5.1.md)
 Contributing
 ------
 
