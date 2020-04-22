@@ -31,7 +31,7 @@ Clear the NuGet cache files. To do this:
 2. Select all files and delete them.
 
 
-###Installation instructions
+### Installation instructions
 
 1. In GitHub, open the **ElasticsearchAuditLogger** repository.
 Clone the repository on your desktop.
