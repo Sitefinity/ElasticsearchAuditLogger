@@ -10,3 +10,4 @@ NuGet.exe
 StyleCop.Cache
 *.vspscc
 /.vs
+*.log

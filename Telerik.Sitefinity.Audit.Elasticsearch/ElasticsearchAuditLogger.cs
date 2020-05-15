@@ -37,7 +37,7 @@ namespace Telerik.Sitefinity.Audit.Elasticsearch
 
                 if (info == null) return;
                 
-                var request = new IndexRequest<IDictionary<string, object>>(new IndexName() { Name = this.IndexName }, new TypeName() { Name = AuditTypeFriendlyName }, new Id(Guid.NewGuid().ToString()));
+                var request = new IndexRequest<IDictionary<string, object>>(this.IndexName, new Id(Guid.NewGuid().ToString()));
                 request.Document = info.Fields;
                 this.client.Index(request);
             }
@@ -65,7 +65,6 @@ namespace Telerik.Sitefinity.Audit.Elasticsearch
             }
         }
 
-        private readonly ElasticClient client;        
-        private const string AuditTypeFriendlyName = "AUDIT";        
+        private readonly ElasticClient client;
     }
 }
