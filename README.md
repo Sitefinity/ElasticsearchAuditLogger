@@ -28,9 +28,9 @@ Requirements
 Clone the repository on your desktop.
 2. In Visual Studio, open the solution file you just downloaded and build the solution.
 3. Open your project and copy the following .NET assemblies to the **bin** folder of your web application:
- * **Telerik.Sitefinity.Audit.Elasticsearch.dll**
- * **Nest.dll**
- * **Elasticsearch.Net.dll**
+>* **Telerik.Sitefinity.Audit.Elasticsearch.dll**
+>* **Nest.dll**
+>* **Elasticsearch.Net.dll**
 4. Build and run your Sitefinity application.
 5. Navigate to *Administration* -> *Modules & Services*.
 6. Browse to the **AuditTrail.ElasticSearch** module and install it.
