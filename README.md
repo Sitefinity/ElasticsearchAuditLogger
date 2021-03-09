@@ -15,7 +15,7 @@ Sitefinity has some predefined dashboards to help you start with the monitoring 
 Requirements
 ----------
 
-- Sitefinity 10 or later with valid license
+- Sitefinity 9 or later with valid license
 - .NET Framework 4.8
 - Visual Studio 2017 or later.
 - Microsoft SQL Server 2012 or later.
