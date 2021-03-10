@@ -11,7 +11,7 @@ using System.Web;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Progress")]
 [assembly: AssemblyProduct("Progress Sitefintiy CMS")]
-[assembly: AssemblyCopyright("Copyright © 2005-2020 Progress Software Corporation and/or one of its subsidiaries or affiliates. All rights reserved.")]
+[assembly: AssemblyCopyright("Copyright © 2005-2021 Progress Software Corporation and/or one of its subsidiaries or affiliates. All rights reserved.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: CLSCompliant(true)]
@@ -37,5 +37,5 @@ using System.Web;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("12.1.7100.0")]
-[assembly: AssemblyFileVersion("12.1.7100.0")]
+[assembly: AssemblyVersion("13.3.7600.0")]
+[assembly: AssemblyFileVersion("13.3.7600.0")]
