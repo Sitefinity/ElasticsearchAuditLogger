@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Configuration;
 using System.Diagnostics.CodeAnalysis;
+using Telerik.Sitefinity.Configuration;
 using Telerik.Sitefinity.Localization;
 using Telerik.Sitefinity.Modules.GenericContent.Configuration;
 
@@ -77,6 +78,7 @@ namespace Telerik.Sitefinity.Audit.Elasticsearch
         /// </summary>        
         [ConfigurationProperty("Password")]
         [ObjectInfo(Title = "Password", Description = "The authentication password")]
+        [SecretData]
         public string Password
         {
             get
