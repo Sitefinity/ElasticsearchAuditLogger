@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Configuration;
 using System.Diagnostics.CodeAnalysis;
+using Telerik.Sitefinity.Configuration;
 using Telerik.Sitefinity.Localization;
 using Telerik.Sitefinity.Modules.GenericContent.Configuration;
 
@@ -51,6 +52,43 @@ namespace Telerik.Sitefinity.Audit.Elasticsearch
             set
             {
                 this["IndexName"] = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the username
+        /// </summary>        
+        [ConfigurationProperty("Username")]
+        [ObjectInfo(Title = "Username", Description = "The authentication username")]
+        public string Username
+        {
+            get
+            {
+                return (string)this["Username"];
+            }
+
+            set
+            {
+                this["Username"] = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the password
+        /// </summary>        
+        [ConfigurationProperty("Password")]
+        [ObjectInfo(Title = "Password", Description = "The authentication password")]
+        [SecretData]
+        public string Password
+        {
+            get
+            {
+                return (string)this["Password"];
+            }
+
+            set
+            {
+                this["Password"] = value;
             }
         }
     }
