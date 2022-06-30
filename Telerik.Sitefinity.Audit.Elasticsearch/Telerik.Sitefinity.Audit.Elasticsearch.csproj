@@ -65,7 +65,7 @@
       <HintPath>..\packages\AWSSDK.SQS.3.7.1.36\lib\net45\AWSSDK.SQS.dll</HintPath>
     </Reference>
     <Reference Include="Elasticsearch.Net, Version=7.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d, processorArchitecture=MSIL">
-      <HintPath>..\packages\Elasticsearch.Net.7.12.1\lib\net461\Elasticsearch.Net.dll</HintPath>
+      <HintPath>..\packages\Elasticsearch.Net.7.17.4\lib\net461\Elasticsearch.Net.dll</HintPath>
     </Reference>
     <Reference Include="Enyim.Caching, Version=2.16.0.0, Culture=neutral, PublicKeyToken=cec98615db04012e, processorArchitecture=MSIL">
       <HintPath>..\packages\EnyimMemcached.2.16.0\lib\net35\Enyim.Caching.dll</HintPath>
