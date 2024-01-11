@@ -20,7 +20,7 @@ Requirements
 - Visual Studio 2017 or later.
 - Microsoft SQL Server 2012 or later.
 - The following tested combinations of versions of **ElasticSearch** and **Kibana**:
-	- ***ElasticSearch 7.5.1*** and ***Kibana 7.5.1***
+	- ***ElasticSearch 8.11.0*** and ***Kibana 8.11.3***
 
 ### Installation instructions
 
@@ -29,14 +29,14 @@ Clone the repository on your desktop.
 2. In Visual Studio, open the solution file you just downloaded and build the solution.
 3. Open your project and copy the following .NET assemblies to the **bin** folder of your web application:
 >* **Telerik.Sitefinity.Audit.Elasticsearch.dll**
->* **Nest.dll**
->* **Elasticsearch.Net.dll**
+>* **Elastic.Clients.Elasticsearch.dll**
+>* **Elastic.Transport.dll**
 4. Build and run your Sitefinity application.
 5. Navigate to *Administration* -> *Modules & Services*.
 6. Browse to the **AuditTrail.ElasticSearch** module and install it.
 
 ### ElasticSearch and Kibana installation and configuration  ###
-- [ElasticSearch 7.5.1 and Kibana 7.5.1](ElasticSearch7.5.1AndKibana7.5.1.md)
+- [ElasticSearch 8.11.0 and Kibana 8.11.](ElasticSearch8.11.0AndKibana8.11.3.md)
 
 Contributing
 ------
