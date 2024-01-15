@@ -12,7 +12,7 @@
 
 **Kibana Setup and Configuration**
 
-1. Download and extract **Kibana** **8.11.3** from [https://www.elastic.co/guide/en/elasticsearch/reference/8.11/index.html](https://www.elastic.co/guide/en/elasticsearch/reference/8.11/index.html) .In the steps to follow, %KibanaPath% refers to the path where your Kibana files reside
+1. Download and extract **Kibana** **8.11.3** from [https://www.elastic.co/downloads/past-releases/kibana-8-11-3](https://www.elastic.co/downloads/past-releases/kibana-8-11-3) .In the steps to follow, %KibanaPath% refers to the path where your Kibana files reside
 2. Open the _%KibanaPath%\config\kibana.yml_ file for editing. Locate the _elasticsearch\_url:_ setting and set it to the root URL of your **Elasticsearch** server. **Default is 9200.** You can also set which port to be used by **Kibana** in the setting - _port_. **Default is 5601.**
 3. Go to %KibanaPath%\bin folder and open the file kibana.bat. This is going to host Kibana on the port set in the configuration file.
 4. Open your hosted **Kibana** site and you will be asked to configure an index pattern.
