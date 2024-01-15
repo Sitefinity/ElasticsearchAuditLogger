@@ -1,10 +1,9 @@
-﻿using System;
+﻿using Elastic.Clients.Elasticsearch;
+using Elastic.Transport;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Text;
-using Elasticsearch.Net;
-using Nest;
-using Nest.JsonNetSerializer;
 using Telerik.Sitefinity.AuditTrail;
 using Telerik.Sitefinity.Configuration;
 using Telerik.Sitefinity.Web.Events;
@@ -22,16 +21,14 @@ namespace Telerik.Sitefinity.Audit.Elasticsearch
         public ElasticsearchAuditLogger()
         {
             var config = Config.Get<ElasticsearchAuditConfig>();
-
-            var pool = new SingleNodeConnectionPool(new Uri(config.ElasticsearchUri));
-            var settings = new ConnectionSettings(pool, JsonNetSerializer.Default);
+            var settings = new ElasticsearchClientSettings(new Uri(config.ElasticsearchUri));
 
             if (!string.IsNullOrWhiteSpace(config.Username) && !string.IsNullOrWhiteSpace(config.Password))
             {
-                settings.BasicAuthentication(config.Username, config.Password);
+                settings.Authentication(new BasicAuthentication(config.Username, config.Password));
             }
 
-            this.client = new ElasticClient(settings);
+            this.client = new ElasticsearchClient(settings);
         }
 
         /// <summary>
@@ -76,6 +73,6 @@ namespace Telerik.Sitefinity.Audit.Elasticsearch
             }
         }
 
-        private readonly ElasticClient client;
+        private readonly ElasticsearchClient client;
     }
 }
