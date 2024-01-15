@@ -34,9 +34,11 @@ Clone the repository on your desktop.
 4. Build and run your Sitefinity application.
 5. Navigate to *Administration* -> *Modules & Services*.
 6. Browse to the **AuditTrail.ElasticSearch** module and install it.
+7. If you are using **Sitefinity** under version **15.1**, you must manually update the **System.Text.Json.dll** to version **6.0.0**.
+   Additionally, remember to include a binding redirect in the web.config file of your web application. 
 
 ### ElasticSearch and Kibana installation and configuration  ###
-- [ElasticSearch 8.11.0 and Kibana 8.11.](ElasticSearch8.11.0AndKibana8.11.3.md)
+- [ElasticSearch 8.11.0 and Kibana 8.11.3](ElasticSearch8.11.0AndKibana8.11.3.md)
 
 Contributing
 ------
