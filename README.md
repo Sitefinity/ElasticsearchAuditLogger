@@ -5,7 +5,6 @@
 
 **ElasticSearchAuditModule** is a Sitefinity module used in conjunction with the [Audit Trail module](http://www.sitefinity.com/documentation/documentationarticles/audit-trail). When you activate both modules, the site administrator can monitor the actions performed by the users and also the system processes by using [Kibana](http://www.elasticsearch.org/overview/kibana/ "Kibana"). Actions are logged by *Type*, *Name*, *TimeStamp*, user performing the actions, user affected by the action, and others.
 
-#### The Audit Trail Elasticsearch module is included in Sitefinity CMS version 7.2 or later.
 
 Predefined dashboards
 ----------
@@ -15,7 +14,7 @@ Sitefinity has some predefined dashboards to help you start with the monitoring 
 Requirements
 ----------
 
-- Sitefinity 9 or later with valid license
+- Sitefinity CMS with valid license
 - .NET Framework 4.8
 - Visual Studio 2017 or later.
 - Microsoft SQL Server 2012 or later.
