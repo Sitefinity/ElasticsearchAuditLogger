@@ -1,0 +1,10 @@
+<Project>
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageVersion Include="Telerik.Sitefinity.Core" Version="15.1.8300" />
+    <PackageVersion Include="Telerik.Sitefinity.AuditTrail" Version="15.1.8300" />
+    <PackageVersion Include="Elastic.Clients.Elasticsearch" Version="8.11.0" />
+  </ItemGroup>
+</Project>

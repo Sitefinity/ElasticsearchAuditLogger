@@ -1,0 +1,79 @@
+[
+  {
+    "_id": "Content-Table",
+    "_type": "search",
+    "_source": {
+      "title": "Content Table",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "ItemTitle",
+        "ItemUrl",
+        "ItemType",
+        "EventType",
+        "ItemLifecycleStatus",
+        "UserName",
+        "EventTags",
+        "ItemStatus",
+        "Messages",
+        "SiteName",
+        "ItemLanguage"
+      ],
+      "sort": [
+        "Timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"index\",\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"fragment_size\":2147483647},\"filter\":[],\"query\":{\"query_string\":{\"query\":\"_exists_:ItemTitle AND (Action=Updated OR Action= New OR Action=Deleted) OR (Action=Updated AND ItemType=Page) OR (Action=Update AND ItemType=Image)\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "BackendTable",
+    "_type": "search",
+    "_source": {
+      "title": "BackendTable",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "UserName",
+        "LoginResult",
+        "UserRoles",
+        "UserIP"
+      ],
+      "sort": [
+        "Timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"index\",\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"fragment_size\":2147483647},\"filter\":[],\"query\":{\"query_string\":{\"query\":\"EventTags:Unsuccessful login OR (UserRoles:Administrators AND (EventTags:Login OR EventTags:Logout))\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "UserUpdates-Table",
+    "_type": "search",
+    "_source": {
+      "title": "UserUpdates Table",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "Messages",
+        "UserName",
+        "UserRoles",
+        "UserIP",
+        "UserID"
+      ],
+      "sort": [
+        "Timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"index\",\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"fragment_size\":2147483647},\"filter\":[],\"query\":{\"query_string\":{\"query\":\"EventTags:created OR EventTags:deleted OR ItemType:User\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  }
+]
